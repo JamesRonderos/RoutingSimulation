@@ -1,0 +1,138 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    margin: 0px;
+    /* system stack font-family (retrieved from https://css-tricks.com/snippets/css/system-font-stack/): */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+#wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+aside {
+    margin: 10px 0 0 10px;
+    width: 250px;
+    border: 1px solid #e3e3e3;
+    border-radius: 3px;
+    border-bottom-width: 2px;
+}
+aside .content {
+    padding: 10px;
+}
+aside .content section h3 {
+    font-size: 14px;
+    border-bottom: 1px solid #e3e3e3;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+aside .content section {
+    margin-bottom: 15px;
+}
+aside .content section ul {
+    padding-left: 20px;
+    font-size: 14px;
+}
+aside .content section ul li {
+    margin-bottom: 5px;
+}
+aside button {
+    display: inline-flex;
+    align-items: center;
+    margin: 0 3px 3px 0;
+    padding: 3px 4px;
+    border-radius: 3px;
+    background: #efefef  linear-gradient(-180deg, #fafafa 0%, #eee 90%);
+    border: 1px solid rgba(0,0,0,0.25);
+    cursor: pointer;
+}
+aside button:hover:not(:active) {
+    background: #efefef linear-gradient(-180deg, #f5f5f5 0%, #e5e5e5 90%);
+    border-color: rgba(0,0,0,0.4);
+}
+aside button:active, aside button.selected {
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.3);
+    border-color: rgba(0,0,0,0.5);
+}
+aside button:active {
+    outline: 0;
+}
+
+footer {
+    font-size: 14px;
+    padding: 3px;
+}
+
+/*----------------------------------------------------------------------
+  GRAPH STYLES
+  ----------------------------------------------------------------------*/
+
+#d3-graph, #d3-graph g {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+.drag_line {
+    fill: none;
+    stroke: #f00;
+    stroke-width: 3px;
+}
+
+/*--------------------------------------------------*/
+
+.links line {
+    fill: #888;
+    stroke: #888;
+    stroke-width: 1px;
+}
+.links line.red {
+    fill: #f00;
+    stroke: #f00;
+    stroke-width: 2px;
+}
+
+/*--------------------------------------------------*/
+
+.nodes circle {
+    fill: #555;
+    stroke-width: 8px;
+    stroke: transparent;
+}
+.nodes circle.hovered {
+    fill: #111;
+}
+.nodes circle.red,
+.nodes circle.hovered.red {
+    fill: #f00;
+}
+
+/*--------------------------------------------------*/
+
+.node_texts text {
+    fill: #000;
+    text-shadow: 0 -1px 5px #ccc, 1px 0 8px #ccc, -1px 0 8px #ccc, 0 1px 5px #ccc;
+    font-size: 13px;
+}
+.node_texts text.red {
+    fill: #f00;
+}
+
+/*--------------------------------------------------*/
+
+.link_texts text {
+    fill: #000;
+    text-shadow: 0 -1px 5px #ccc, 1px 0 8px #ccc, -1px 0 8px #ccc, 0 1px 5px #ccc;
+    font-size: 13px;
+}
+.link_texts text.red, .link_texts text.hovered {
+    fill: #f00;
+}

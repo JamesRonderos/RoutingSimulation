@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+    <!-- META -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CPSC447 Final Project</title>
+
+    <!-- SCRIPTS -->
+    <script type="text/javascript" src="./lib.js"></script>
+    <script type="text/javascript" src="./main.js"></script>
+    <script type="text/javascript" src="./vis.js"></script>
+    <script type="text/javascript" src="http://d3js.org/d3.v4.js"></script>
+
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+    <main id="wrapper">
+        <svg id="d3-graph" width="640" height="512" style="background:#ccc"></svg>
+        <aside>
+            <div class="content">
+                <section>
+                    <h3>Route:</h3>
+                    <input type="text" id="route1" placeholder="Source node" />
+                    <input type="text" id="route2" placeholder="Target node" />
+                    <br/>
+                    <button id="routeButton">Run</button>
+                </section>
+                <section>
+                    <h3>Creating</h3>
+                    <ul>
+                        <li>Double click in empty space to create a new node</li>
+                        <li>Shift click a node and drag to another node to create a link</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Modifying</h3>
+                    <ul>
+                        <li>Click a node and drag to move</li>
+                        <li>Double click cost text to change link cost</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Deleting</h3>
+                    <ul>
+                        <li>Ctrl-click link cost labels to delete the link</li>
+                        <li>Ctrl-click a node or its label to delete it</li>
+                    </ul>
+                </section>
+            </div>
+        </aside>
+    </main>
+    <footer>By Bennett Falkenberg, James Ronderos, and Matthew Lee.</footer>
+</body>
+</html>
